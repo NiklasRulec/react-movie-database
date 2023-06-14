@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import MovieData from "../assets/data";
 import MovieCard from "../components/MovieCard";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../context/Context";
+import DarkLight from "../assets/darklight.png";
 
 const Home = () => {
+  const { theme, setTheme } = useContext(ThemeContext);
+
+  const toggleTheme = () => {
+    setTheme((prev) => !prev);
+    console.log(theme);
+  };
+
   const [data, setData] = useState(MovieData);
   console.log(data);
 
@@ -57,6 +66,11 @@ const Home = () => {
           onChange={handleSearch}
           placeholder="Film suchen"
         />
+        <div onClick={toggleTheme}>
+          <button>
+            <img src={DarkLight} alt="darklight-icon" />
+          </button>
+        </div>
       </article>
       <article className="movie-cards-gallery">
         {filteredData.map((item, index) => (

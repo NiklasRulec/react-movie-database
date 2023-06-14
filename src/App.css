@@ -30,6 +30,18 @@ a {
   text-decoration: none;
 }
 
+/* ! ++++++++++ THEMES ++++++++++ */
+
+.dark {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.light {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
 /* ! ++++++++++ BACK-BUTTON ++++++++++ */
 
 .backbutton {
@@ -54,7 +66,6 @@ a {
   width: 100vw;
   min-height: 100vh;
   padding: 2rem;
-  background-color: var(--main);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,7 +74,6 @@ a {
 
 .home-section h1 {
   margin-bottom: 2rem;
-  color: var(--light);
 }
 
 /* ! ++++++++++ SORT-FIELD ++++++++++ */
@@ -101,6 +111,11 @@ a {
   border-radius: 1rem;
   background-color: var(--light);
   color: var(--dark);
+}
+
+.search-field div button img {
+  width: 2rem;
+  height: 2rem;
 }
 
 /* ! ++++++++++ MOVIE-CARDS-GALLERY ++++++++++ */
@@ -148,7 +163,6 @@ a {
   width: 100vw;
   min-height: 100vh;
   padding: 2rem;
-  background-color: var(--main);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,5 +171,4 @@ a {
 
 .movie-details-section h2 {
   margin-bottom: 2rem;
-  color: var(--light);
 }
